@@ -39,9 +39,10 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 36px; /* отступ между опросниками */
+    transition: box-shadow 0.2s;
 }
-.poll:last-child {
-    margin-bottom: 0; /* у последнего опросника отступ убирается */
+.poll:hover {
+    box-shadow: 0 8px 32px 0 rgba(123,47,242,0.18), 0 2px 16px 0 #f357a855;
 }
 .poll h2 {
     color: #7b2ff2;
@@ -88,7 +89,7 @@
     font-weight: 600;
     cursor: pointer;
     transition: background 0.2s, transform 0.1s;
-    box-shadow: 0 2px 8px #7b2ff233;
+    box-shadow: 0 2px 12px #7b2ff233;
 }
 .poll button[type="submit"]:hover {
     background: linear-gradient(90deg, #f357a8 0%, #7b2ff2 100%);
@@ -108,6 +109,12 @@
     border-radius: 16px;
     box-shadow: 0 2px 12px #0002;
     background: #eee;
+    transition: box-shadow 0.2s, transform 0.15s;
+    cursor: pointer;
+}
+.poll-img:hover {
+    box-shadow: 0 8px 32px #7b2ff288, 0 2px 16px #f357a855;
+    transform: scale(1.03);
 }
 .img-number {
     position: relative;
@@ -141,12 +148,13 @@
     font-size: 22px;
     font-weight: 700;
     cursor: pointer;
-    transition: background 0.2s, transform 0.1s;
+    transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
     box-shadow: 0 2px 12px #7b2ff233;
 }
 .main-submit-btn:hover {
     background: linear-gradient(90deg, #f357a8 0%, #7b2ff2 100%);
     transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 8px 32px #7b2ff288, 0 2px 16px #f357a855;
 }
 
 @media (max-width: 900px) {
